@@ -51,11 +51,8 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         Docket docket = new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo)
                 .select()
-<<<<<<< HEAD
                 .apis(RequestHandlerSelectors.basePackage("com.sky.controller"))// TODO 指定扫描的包
-=======
                 .apis(RequestHandlerSelectors.basePackage("com.sky.controller"))
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
                 .paths(PathSelectors.any())
                 .build();
         return docket;
@@ -66,10 +63,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
      * @param registry
      */
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
-<<<<<<< HEAD
         log.info("静态资源映射");
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
         registry.addResourceHandler("/doc.html").addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }

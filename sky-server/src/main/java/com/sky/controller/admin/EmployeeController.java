@@ -1,10 +1,7 @@
 package com.sky.controller.admin;
 
 import com.sky.constant.JwtClaimsConstant;
-<<<<<<< HEAD
 import com.sky.dto.EmployeeDTO;
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
 import com.sky.dto.EmployeeLoginDTO;
 import com.sky.entity.Employee;
 import com.sky.properties.JwtProperties;
@@ -12,11 +9,8 @@ import com.sky.result.Result;
 import com.sky.service.EmployeeService;
 import com.sky.utils.JwtUtil;
 import com.sky.vo.EmployeeLoginVO;
-<<<<<<< HEAD
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,10 +27,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/admin/employee")
 @Slf4j
-<<<<<<< HEAD
 @Api(tags= "员工相关接口")
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
 public class EmployeeController {
 
     @Autowired
@@ -50,10 +41,7 @@ public class EmployeeController {
      * @param employeeLoginDTO
      * @return
      */
-<<<<<<< HEAD
     @ApiOperation(value="员工登录相关接口")
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
     @PostMapping("/login")
     public Result<EmployeeLoginVO> login(@RequestBody EmployeeLoginDTO employeeLoginDTO) {
         log.info("员工登录：{}", employeeLoginDTO);
@@ -83,16 +71,12 @@ public class EmployeeController {
      *
      * @return
      */
-<<<<<<< HEAD
     @ApiOperation("员工退出接口")
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
     @PostMapping("/logout")
     public Result<String> logout() {
         return Result.success();
     }
 
-<<<<<<< HEAD
     @ApiOperation("新增员工接口")
     @PostMapping()
     public Result<String> save(@RequestBody EmployeeDTO employeeDTO){
@@ -101,6 +85,4 @@ public class EmployeeController {
         return Result.success();
     }
 
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
 }

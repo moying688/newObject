@@ -1,10 +1,7 @@
 package com.sky.interceptor;
 
 import com.sky.constant.JwtClaimsConstant;
-<<<<<<< HEAD
 import com.sky.context.BaseContext;
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
 import com.sky.properties.JwtProperties;
 import com.sky.utils.JwtUtil;
 import io.jsonwebtoken.Claims;
@@ -51,10 +48,7 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
             Claims claims = JwtUtil.parseJWT(jwtProperties.getAdminSecretKey(), token);
             Long empId = Long.valueOf(claims.get(JwtClaimsConstant.EMP_ID).toString());
             log.info("当前员工id：", empId);
-<<<<<<< HEAD
             BaseContext.setCurrentId(empId);//当前用户id加入到ThreadLocal
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
             //3、通过，放行
             return true;
         } catch (Exception ex) {

@@ -1,14 +1,11 @@
 package com.sky.service.impl;
 
 import com.sky.constant.MessageConstant;
-<<<<<<< HEAD
 import com.sky.constant.PasswordConstant;
 import com.sky.constant.StatusConstant;
 import com.sky.context.BaseContext;
 import com.sky.dto.EmployeeDTO;
-=======
 import com.sky.constant.StatusConstant;
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
 import com.sky.dto.EmployeeLoginDTO;
 import com.sky.entity.Employee;
 import com.sky.exception.AccountLockedException;
@@ -16,19 +13,12 @@ import com.sky.exception.AccountNotFoundException;
 import com.sky.exception.PasswordErrorException;
 import com.sky.mapper.EmployeeMapper;
 import com.sky.service.EmployeeService;
-<<<<<<< HEAD
 import org.springframework.beans.BeanUtils;
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
-<<<<<<< HEAD
 import java.time.LocalDateTime;
-
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
@@ -54,15 +44,12 @@ public class EmployeeServiceImpl implements EmployeeService {
             throw new AccountNotFoundException(MessageConstant.ACCOUNT_NOT_FOUND);
         }
 
-<<<<<<< HEAD
         // TODO 密码比对
 //         TODO 后期需要进行md5加密，然后再进行比对(已处理)
         password = DigestUtils.md5DigestAsHex(password.getBytes());
 
-=======
         //密码比对
         // TODO 后期需要进行md5加密，然后再进行比对
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
         if (!password.equals(employee.getPassword())) {
             //密码错误
             throw new PasswordErrorException(MessageConstant.PASSWORD_ERROR);
@@ -77,7 +64,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employee;
     }
 
-<<<<<<< HEAD
     /**
      * 新增员工
      * @param employeeDTO
@@ -102,6 +88,4 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     }
 
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
 }

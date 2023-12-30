@@ -1,6 +1,5 @@
 package com.sky.handler;
 
-<<<<<<< HEAD
 import com.sky.constant.MessageConstant;
 import com.sky.exception.BaseException;
 import com.sky.result.Result;
@@ -11,14 +10,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.sql.SQLIntegrityConstraintViolationException;
 
-=======
 import com.sky.exception.BaseException;
 import com.sky.result.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
 /**
  * 全局异常处理器，处理项目中抛出的业务异常
  */
@@ -36,7 +33,6 @@ public class GlobalExceptionHandler {
         log.error("异常信息：{}", ex.getMessage());
         return Result.error(ex.getMessage());
     }
-<<<<<<< HEAD
     //Duplicate entry 'test' for key 'employee.idx_username'
     @ExceptionHandler
     public Result UserExceptionHandler(SQLIntegrityConstraintViolationException ex){
@@ -52,7 +48,5 @@ public class GlobalExceptionHandler {
             return Result.error(MessageConstant.UNKNOWN_ERROR);
         }
     }
-=======
->>>>>>> 5e5b6e5ae2c7ab2773bfa65a5341987e7d8934ae
 
 }
